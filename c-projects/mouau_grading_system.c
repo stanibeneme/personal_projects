@@ -1,8 +1,12 @@
 #include <stdio.h>
 
-int main(){
-    
-int grade = 0;
+int main(void)
+{
+
+int score;
+
+printf("what is your score \n");
+scanf("%d",&score);
 
 /**An automated MOUAU Grading System
  * 70 - 100 A
@@ -12,31 +16,34 @@ int grade = 0;
  * 40 - 44  E
  *  0 - 39  F
  */
- 
-    if (grade >=70 && grade <=100)
+
+    if (score >=70 && score <=100)
     {
         printf("your grade is A");
     }
-    else if (grade >=60 && grade <=69)
+    else if (score >=60 && score <=69)
     {
         printf("your grade is B");
     }
-    else if (grade >= 50 && grade <=59)
-    { 
+    else if (score >= 50 && score <=59)
+    {
         printf("your grade is C");
     }
-     else if (grade >= 45 && grade <=49)
-    { 
+     else if (score >= 45 && score <=49)
+    {
         printf("your grade is D");
     }
-     else if (grade >= 40 && grade <=44)
-    { 
+     else if (score >= 40 && score <=44)
+    {
         printf("your grade is E");
     }
-     else if (grade <= 39)
-    { 
+     else if (score <= 39 && score >= 0)
+    {
         printf("your grade is F");
     }
-
-    return 0;    
-} 
+    else
+    {
+        printf("You entered an invalid score");
+    }
+    return 0;
+}
